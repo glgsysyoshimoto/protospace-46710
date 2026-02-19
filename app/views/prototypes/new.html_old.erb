@@ -1,0 +1,14 @@
+<%# <h1>New Proto</h1> %>
+<%#= render "form" %>
+
+<div class="contents row">
+  <div class="container">
+    <h3>投稿する</h3>
+    <%= form_with(model: @prototype, local: true) do |form| %>
+      <%= f.text_field :title %>
+      <%= f.text_area :catch_copy %>
+      <%= f.text_area :concept %>
+      <%= form.submit "投稿" %>
+    <% end %>
+  </div>
+</div>
