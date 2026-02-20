@@ -10,6 +10,7 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :profile, presence: true
   validates :position, presence: true
+  validates :occupation, presence: true
 
   # アソシエーション
   has_many :prototypes  # prototypesテーブルとのアソシエーション
