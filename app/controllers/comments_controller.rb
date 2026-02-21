@@ -23,6 +23,7 @@ class CommentsController < ApplicationController
       # render "prototypes/show"
       @prototype = Prototype.find(params[:prototype_id])
       @comment = comment
+      @comments = @prototype.comments.includes(:user)
       render "prototypes/show"
     end
   end
